@@ -1,0 +1,40 @@
+@import "fonts";
+*{
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+.container{
+  max-width: 1830px;
+  width: 100%;
+  padding: 0 25px;
+  margin: 0 auto;
+  &_sm{
+      max-width: 1220px;
+  }
+}
+body{
+  margin: 0;
+}
+@mixin button($color, $bg, $borderColor, $bgHover, $colorHover, $borderHover) {
+  color: $color;
+  background-color: $bg;
+  padding: 19px 34px 20px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid $borderColor;
+  text-transform: uppercase;
+  transition: background-color .3s, color .3s, border-color .3s;
+  text-decoration: none;
+  display: inline-block;
+  &:hover{
+    color: $colorHover;
+    background-color: $bgHover;
+    border-color: $borderHover;
+  }
+}
+
+.btn{
+  &-outline{
+    @include button(#454647, transparent, #333, $green, white, $green);
+  }
+}
