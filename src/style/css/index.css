@@ -49,7 +49,7 @@
 }
 
 .container {
-  max-width: 1830px;
+  max-width: 1410px;
   width: 100%;
   padding: 0 25px;
   margin: 0 auto;
@@ -153,7 +153,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 58px;
+  padding: 58px 0;
 }
 .header__right-part {
   display: flex;
@@ -165,6 +165,7 @@ body {
   letter-spacing: 0.6px;
   color: #222222;
   text-transform: uppercase;
+  text-decoration: none;
 }
 .logo__part {
   font-weight: 700;
@@ -461,9 +462,91 @@ body {
   padding: 53px;
 }
 
+.brand {
+  padding-bottom: 124px;
+}
+.brand__articles {
+  display: flex;
+  justify-content: space-between;
+}
+.brand__part {
+  width: calc(50% - 15px);
+}
+.brand__img {
+  display: block;
+  width: 100%;
+}
+.brand__article .brand__img {
+  margin-bottom: 29px;
+}
+.brand__article {
+  margin-top: 62px;
+}
+.brand__title {
+  font-size: 18px;
+  line-height: 1.11;
+  color: #575153;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+}
+.brand__subtitle {
+  font-size: 13px;
+  color: #727272;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 19px;
+}
+.brand__description {
+  font-size: 15px;
+  line-height: 1.47;
+  color: #8e8c8c;
+  margin: 0;
+}
+.brand__link {
+  color: #00c8c8;
+  text-decoration: none;
+}
+.brand__logos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.main-banner {
+  display: flex;
+  background-image: url("../../img/banner@3x.png");
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 63px;
+}
+.main-banner__title {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.13;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 0 53px;
+  text-transform: uppercase;
+}
+.main-banner__description {
+  font-size: 30px;
+  line-height: 1.8;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .hero {
   background-color: #f8f8f8;
-  margin-top: -89px;
+  margin-top: -147px;
   margin-bottom: 62px;
 }
 .hero__bg {

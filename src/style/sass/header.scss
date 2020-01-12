@@ -81,7 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 58px;
+    padding: 58px 0;
   }
 
   &__right-part {
@@ -95,6 +95,7 @@
   letter-spacing: 0.6px;
   color: #222222;
   text-transform: uppercase;
+  text-decoration: none;
 
   &__part {
     font-weight: 700;

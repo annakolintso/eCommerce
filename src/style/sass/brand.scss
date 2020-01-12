@@ -1,0 +1,82 @@
+.brand{
+  padding-bottom: 124px;
+  &__articles{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__part{
+    width: calc(50% - 15px);
+  }
+  &__img{
+    display: block;
+    width: 100%;
+  }
+  &__article{
+    .brand__img{
+      margin-bottom: 29px;
+    }
+  }
+  &__article{
+    margin-top: 62px;
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 1.11;
+    color: #575153;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 28px;
+  }
+  &__subtitle{
+    font-size: 13px;
+    color: #727272;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 19px;
+  }
+  &__description{
+    font-size: 15px;
+    line-height: 1.47;
+    color: #8e8c8c;
+    margin: 0;
+  }
+  &__link{
+    color: #00c8c8;
+    text-decoration: none;
+  }
+  &__logos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+}
+.main-banner{
+  display: flex;
+  background-image: url("../../img/banner@3x.png");
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 63px;
+  &__title{
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.13;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 0 53px;
+    text-transform: uppercase;
+  }
+  &__description{
+    font-size: 30px;
+    line-height: 1.8;
+    letter-spacing: 0.75px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
