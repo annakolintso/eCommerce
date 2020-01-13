@@ -1,0 +1,85 @@
+.stores{
+  &__lists{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 62px;
+  }
+  &__item{
+    max-width: calc(33.3% - 20px);
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 1.11;
+    color: #575153;
+    font-weight: 500;
+    margin: 0 0 29px;
+    text-transform: uppercase;
+  }
+  &__address{
+    font-size: 13px;
+    line-height: 1.54;
+    color: #727272;
+    font-weight: 500;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+  }
+  &__description{
+    font-size: 15px;
+    line-height: 1.47;
+    color: #8e8c8c;
+    margin: 0 0 30px;
+  }
+  &__map{
+    background-color: #f8f8f8;
+    margin-bottom: 164px;
+    display: flex;
+    align-items: center;
+  }
+  &__frame{
+    margin-right: 41px;
+  }
+  &__contacts{
+    max-width: 548px;
+    width: 100%;
+    margin-right: 60px;
+  }
+  &__details{
+    margin: 0 0 62px;
+  }
+  &__contact-list{
+    padding: 0;
+  }
+  &__contact-item{
+    list-style-type: none;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #8e8c8c;
+  }
+  &__icon-one{
+    display: flex;
+  }
+  &__img{
+    width: 16px;
+    height: auto;
+    display: block;
+    margin-right: 14px;
+  }
+  &__link{
+    width: 30px;
+    height: 30px;
+    background-color: #727272;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-child){
+      margin-right: 14px;
+    }
+  }
+  &__icon{
+    width: 20px;
+    height: 20px;
+  }
+}
