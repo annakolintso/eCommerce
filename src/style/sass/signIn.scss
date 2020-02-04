@@ -1,0 +1,62 @@
+.forms{
+  display: flex;
+  justify-content: space-between;
+  .form{
+    width: calc(50% - 35px);
+    &__name{
+      font-size: 18px;
+      line-height: 1.11;
+      text-transform: uppercase;
+      color: #575153;
+      margin: 0 0 46px;
+    }
+    &__input{
+      display: block;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.47;
+      color: #989898;
+      padding: 15px 9px 11px 9px;
+      border: solid 0.5px #e7e7e7;
+      width: 100%;
+      outline: none;
+      &:not(:last-child){
+        margin-bottom: 34px;
+      }
+    }
+    &__buttons{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__link{
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 1.47;
+      color: #00c8c8;
+      display: flex;
+      align-items: center;
+    }
+    &__icon{
+      height: 14px;
+      padding-left: 5px;
+    }
+  }
+  .sign-in{
+    position: relative;
+    &::before{
+      content: '';
+      display: block;
+      height: 100%;
+      width: 1px;
+      background-color: #eeeeee;
+      position: absolute;
+      right: -35px;
+    }
+
+
+  }
+  .register{
+
+  }
+}

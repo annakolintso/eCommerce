@@ -37,4 +37,17 @@ body{
   &-outline{
     @include button(#454647, transparent, #333, $green, white, $green);
   }
+  &-dark{
+    @include button(#454647, transparent, #737373, #333333, white, #333333);
+  }
+  &-icon{
+    display: flex;
+    align-items: center;
+    img{
+      max-width: 18px;
+      object-fit: contain;
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
 }

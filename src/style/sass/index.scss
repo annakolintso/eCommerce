@@ -4,18 +4,25 @@
 @import "footer";
 @import "brand";
 @import "stores";
+@import "product-view";
+@import "signIn";
 
 .hero {
+  background-image: url("../../img/main@3x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
   background-color: #f8f8f8;
   margin-top: -147px;
   margin-bottom: 62px;
-
+  height: 830px;
   &__bg {
     display: block;
   }
 
   &__content {
     position: relative;
+    height: 830px;
   }
 
   &__name {
@@ -120,6 +127,24 @@
     display: none;
     z-index: 1;
     transition: box-shadow .3s;
+  }
+  &__title{
+    font-size: 17px;
+    line-height: 1.54;
+    text-align: center;
+    color: #727272;
+    text-transform: uppercase;
+    margin: 0 0 19px;
+  }
+  &__desc{
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    text-align: center;
+    color: #8e8c8c;
+    margin: 0 0 17px;
   }
   &__photo{
     display: none;
