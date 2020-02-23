@@ -116,6 +116,16 @@
   &__rating {
     display: flex;
     margin-right: 14px;
+    svg{
+      cursor: pointer;
+      fill: rgb(223, 223, 222);
+      &:hover{
+        & ~ svg{
+          fill: rgb(222, 211, 170);
+        }
+
+      }
+    }
   }
 
   &__social {

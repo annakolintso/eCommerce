@@ -1,0 +1,89 @@
+.cards{
+  &__sm{
+    width: calc(25% - 15px);
+
+  }
+  &__lookbook{
+    display: block;
+    &-block{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      .cards__content{
+        &_sm{
+          width: calc(25% - 20px);
+        }
+        &_half{
+          width: calc(50% - 15px);
+          display: flex;
+          justify-content: space-between;
+
+        }
+        &_md{
+          width: calc(25% - (90px / 4));
+        }
+      }
+
+      .cards__banner{
+        height: 500px;
+        background-image: url(./../../img/banner-sm@3x.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        &-big{
+          position: relative;
+          width: calc(75% - 10px);
+          height: 500px;
+          background-image: url(./../../img/banner-big@3x.png);
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+        .lookbook__content{
+          align-items: start;
+          margin-top: 60px;
+        }
+        .lookbook__title-part{
+          display: inline;
+          padding-left: 5px;
+        }
+        .lookbook__title{
+          text-align: left;
+        }
+        .lookbook__description{
+          text-align: left;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+.banner-look{
+  position: absolute;
+  right: 10px;
+  top: 100px;
+  &__title{
+    text-transform: uppercase;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 200px;
+    letter-spacing: 5px;
+    color: $green;
+    text-align: right;
+    margin: 0;
+  }
+  &__part{
+    font-size: 72px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 72px;
+    letter-spacing: 1.8px;
+    color: #00c8c8;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
