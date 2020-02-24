@@ -14,6 +14,10 @@
 }
 body{
   margin: 0;
+  &.no-scroll{
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 @mixin button($color, $bg, $borderColor, $bgHover, $colorHover, $borderHover) {
   color: $color;

@@ -271,8 +271,11 @@
   top: 0;
   left: 0;
   z-index: 4;
-  display: flex;
+  display: none;
   justify-content: flex-end;
+  &.active{
+    display: flex;
+  }
 }
 .basket{
   padding: 0 23px;
@@ -324,6 +327,7 @@
       font-size: 12px;
       padding-left: 6px;
     }
+
   }
   &__price{
     margin: 0;

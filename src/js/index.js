@@ -19,3 +19,18 @@ $(document).ready(function() {
         width: '170px'
     });
 });
+
+
+let basketBtn = document.querySelector('.header__button');
+let basketPopup = document.querySelector('.popup-basket');
+let closePopup = basketPopup.querySelector('.close');
+basketBtn.addEventListener('click', () => {
+    basketPopup.classList.add('active');
+    document.body.classList.add('no-scroll');
+});
+basketPopup.addEventListener('click', event => {
+    if(event.target.classList.contains('popup-basket') || event.target.closest('.close')){
+        basketPopup.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+});
