@@ -286,19 +286,51 @@
   left: 0;
   z-index: 4;
   display: none;
-  justify-content: flex-end;
+  &.right{
+    justify-content: flex-end;
+  }
+  &.left{
+    justify-content: flex-start;
+  }
   &.active{
     display: flex;
   }
+  &-wrap{
+    padding: 0 23px;
+    background-color: #fff;
+    height: 100vh;
+    width: 400px;
+    z-index: 4;
+    position: relative;
+  }
+  .close{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    right: 23px;
+    top: 28px;
+    span{
+      display: block;
+      width: 13px;
+      height: 1px;
+      background-color: #333333;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      &:first-child{
+        transform: rotate(45deg);
+      }
+      &:last-child{
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
 .basket{
-  padding: 0 23px;
-  background-color: #fff;
-  height: 100vh;
-  width: 400px;
-  z-index: 4;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   &__main{
     overflow: auto;
     flex: 1;
@@ -362,27 +394,6 @@
   &__total{
     display: flex;
     justify-content: space-between;
-  }
-}
-.close{
-  position: relative;
-  width: 13px;
-  height: 13px;
-  cursor: pointer;
-  span{
-    display: block;
-    width: 13px;
-    height: 1px;
-    background-color: #333333;
-    position: absolute;
-    top: 6px;
-    left: 0;
-    &:first-child{
-      transform: rotate(45deg);
-    }
-    &:last-child{
-      transform: rotate(-45deg);
-    }
   }
 }
 
@@ -486,5 +497,10 @@
     &__input{
       width: 170px;
     }
+  }
+}
+@media only screen and (max-width: 1024px){
+  .hero{
+    margin-top: 0;
   }
 }

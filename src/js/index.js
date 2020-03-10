@@ -22,15 +22,23 @@ $(document).ready(function() {
 
 
 let basketBtn = document.querySelector('.header__button');
+let popup = document.querySelectorAll('.popup');
 let basketPopup = document.querySelector('.popup-basket');
-let closePopup = basketPopup.querySelector('.close');
+let menuPopup = document.querySelector('.popup-menu');
+let burgerBtn = document.querySelector(".burger");
 basketBtn.addEventListener('click', () => {
     basketPopup.classList.add('active');
     document.body.classList.add('no-scroll');
 });
-basketPopup.addEventListener('click', event => {
-    if(event.target.classList.contains('popup-basket') || event.target.closest('.close')){
-        basketPopup.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-    }
+burgerBtn.addEventListener('click', () => {
+    menuPopup.classList.add('active');
+    document.body.classList.add('no-scroll');
 });
+popup.forEach(el => {
+    el.addEventListener('click', event => {
+        if(event.target.classList.contains('popup') || event.target.closest('.close')){
+            el.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        }
+    });
+})

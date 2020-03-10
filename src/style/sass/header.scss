@@ -1,6 +1,12 @@
 .header {
   &__top {
     background-color: #333333;
+    .logo{
+      display: none;
+    }
+    .burger{
+      display: none;
+    }
   }
 
   &__custom {
@@ -47,19 +53,6 @@
     line-height: 1.62;
     background-color: $green;
     padding: 14px 22px;
-  }
-
-  &__basket::after {
-    content: "";
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-style: none;
-    border-left: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    transform: rotate(-45deg);
-    margin-left: 8px;
-    margin-top: -2px;
   }
 
   &__basket::before {
@@ -373,4 +366,57 @@
     font-weight: 300;
     display: block;
   }
+}
+@media only screen and (max-width: 1024px){
+  .header{
+    &__top{
+      position: relative;
+      .logo{
+        display: block;
+        color: #ffffff;
+      }
+      .burger{
+        display: block;
+        position: relative;
+        width: 13px;
+        height: 13px;
+        cursor: pointer;
+        span{
+          display: block;
+          width: 13px;
+          height: 1px;
+          background-color: #FFFFFF;
+          position: absolute;
+          &:first-child{
+            top: 0;
+          }
+          &:nth-child(2){
+            top: 5px;
+          }
+          &:last-child{
+            top: 10px;
+          }
+        }
+      }
+    }
+    &__main{
+      display: none;
+    }
+    .currency{
+      display: none;
+    }
+    .header__register{
+      display: none;
+    }
+    .header__sign-in{
+      display: none;
+    }
+    &__basket{
+      font-size: 0;
+      &:before{
+        margin: 0;
+      }
+    }
+  }
+
 }
