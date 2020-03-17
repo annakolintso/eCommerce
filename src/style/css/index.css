@@ -423,6 +423,9 @@ body.no-scroll {
     display: block;
     color: #ffffff;
   }
+  .header__top .logo-mobile {
+    display: none;
+  }
   .header__top .burger {
     display: block;
     position: relative;
@@ -463,6 +466,14 @@ body.no-scroll {
   }
   .header__basket:before {
     margin: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .header__top .logo {
+    display: none;
+  }
+  .header__top .logo-mobile {
+    display: block;
   }
 }
 .footer {
@@ -533,6 +544,62 @@ body.no-scroll {
   padding: 53px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .footer__banner {
+    flex: 1;
+  }
+  .footer__link:not(:last-child) {
+    margin-right: 28px;
+  }
+  .footer__lists {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .footer__list {
+    width: 33.3%;
+  }
+  .footer__social {
+    padding: 0px 90px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .footer__social {
+    padding: 0px 50px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .footer {
+    padding: 28px 0;
+  }
+  .footer__lists {
+    display: block;
+  }
+  .footer__lists:not(:last-child) {
+    margin: 0 0 26px 0;
+  }
+  .footer__item_title {
+    margin-bottom: 3px;
+  }
+  .footer__list {
+    width: 100%;
+  }
+  .footer__banners {
+    display: block;
+  }
+  .footer__banner .banner {
+    font-size: 14px;
+    padding: 20px;
+  }
+  .footer__icon {
+    height: 16px;
+    width: 16px;
+  }
+  .footer__social {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+}
 .brand {
   padding-bottom: 124px;
 }
@@ -1838,6 +1905,169 @@ body.no-scroll {
 @media only screen and (max-width: 1024px) {
   .hero {
     margin-top: 0;
+    height: 500px;
+    margin-bottom: 36px;
+  }
+  .hero__content {
+    height: 500px;
+  }
+  .hero__content:after {
+    background-position: -110px center;
+  }
+  .hero__btn {
+    bottom: 40px;
+  }
+  .hero__name {
+    font-size: 258px;
+  }
+
+  .popular {
+    margin-bottom: 36px;
+  }
+  .popular__wrap {
+    padding-top: 36px;
+  }
+  .popular__list {
+    margin-bottom: 36px;
+  }
+
+  .banner {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .lookbook {
+    margin-bottom: 56px;
+  }
+  .lookbook__title {
+    font-size: 25px;
+  }
+  .lookbook__img {
+    width: 55%;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+  .cards__wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .cards__block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cards__block:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .cards__block:nth-child(even) .cards__small {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .cards__block:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .cards__big {
+    height: 310px;
+  }
+  .cards__item-xl {
+    height: 310px;
+  }
+  .cards__item-sm {
+    height: 310px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .hero__name {
+    font-size: 206px;
+    line-height: 206px;
+  }
+
+  .popular__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .lookbook__img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    height: 257px;
+  }
+  .hero__btn {
+    right: 0;
+    width: 100%;
+    bottom: 8px;
+  }
+  .hero__name {
+    font-size: 98px;
+    line-height: 98px;
+    top: 40%;
+  }
+  .hero__content {
+    height: 257px;
+  }
+  .hero__content:after {
+    background-position: -55px center;
+  }
+
+  .popular__wrap {
+    padding-bottom: 28px;
+  }
+  .popular__list {
+    display: none;
+  }
+
+  .cards__block:nth-child(even) .cards__small {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .cards__block:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .cards__block .cards__small {
+    margin-bottom: 10px;
+  }
+  .cards__small .cards__content {
+    width: calc(50% - 5px);
+  }
+  .cards__price {
+    font-size: 12px;
+  }
+  .cards__big {
+    height: 200px;
+  }
+  .cards__item-sm {
+    height: 200px;
+  }
+  .cards__item-xl {
+    height: 200px;
+  }
+
+  .lookbook {
+    margin-bottom: 26px;
+    display: block;
+  }
+  .lookbook__title {
+    font-size: 22px;
+  }
+  .lookbook__title-part {
+    display: inline-block;
+  }
+  .lookbook__img {
+    width: 33%;
+  }
+  .lookbook__item {
+    max-width: 100%;
+  }
+  .lookbook__item:not(:last-child) {
+    margin-bottom: 15px;
   }
 }
 

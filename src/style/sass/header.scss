@@ -374,6 +374,9 @@
       .logo{
         display: block;
         color: #ffffff;
+        &-mobile{
+          display: none;
+        }
       }
       .burger{
         display: block;
@@ -419,4 +422,17 @@
     }
   }
 
+}
+@media only screen and (max-width: 640px) {
+  .header {
+    &__top {
+      .logo {
+        display: none;
+
+        &-mobile {
+          display: block;
+        }
+      }
+    }
+  }
 }
