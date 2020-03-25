@@ -102,6 +102,7 @@
     line-height: 1.47;
     color: #8e8c8c;
     padding-left: 11px;
+    flex: 1;
   }
   &__square{
     display: flex;
@@ -120,6 +121,73 @@
       display: none;
       width: 13px;
       height: 15px;
+    }
+  }
+}
+@media only screen and (max-width: 1024px){
+  .main-banner{
+    height: 320px;
+    margin-bottom: 40px;
+    &__title{
+      font-size: 30px;
+      margin-bottom: 28px;
+    }
+    &__description{
+      font-size: 22px;
+    }
+  }
+  .forms{
+    padding-bottom: 60px;
+    .form{
+      &__buttons{
+        flex-direction: column;
+        align-items: flex-start;
+        .btn-outline{
+          width: 222px;
+        }
+      }
+      &__link{
+        display: block;
+        margin-top: 10px;
+      }
+      &__desc{
+        margin: 20px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 640px){
+  .main-banner{
+    height: 200px;
+    &__title{
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+    &__description{
+      font-size: 14px;
+    }
+  }
+  .forms{
+    display: block;
+    .form{
+      width: 100%;
+      &__buttons{
+        .btn-outline{
+          width: 100%;
+        }
+      }
+    }
+    .sign-in{
+      margin-bottom: 50px;
+      &:before{
+        height: 1px;
+        width: 100%;
+        bottom: -20px;
+        left: 0;
+      }
     }
   }
 }

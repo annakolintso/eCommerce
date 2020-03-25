@@ -15,6 +15,9 @@
     margin: 0 0 29px;
     text-transform: uppercase;
   }
+  &__social{
+    margin-bottom: 15px;
+  }
   &__address{
     font-size: 13px;
     line-height: 1.54;
@@ -82,5 +85,64 @@
   &__icon{
     width: 20px;
     height: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-banner {
+    height: 320px;
+    margin-bottom: 40px;
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 28px;
+    }
+
+    &__description {
+      font-size: 22px;
+    }
+  }
+  .stores{
+    &__map{
+      align-items: flex-start;
+      padding-top: 20px;
+      margin-bottom: 64px;
+    }
+    &__details{
+      margin-bottom: 30px;
+
+    }
+  }
+}
+@media only screen and (max-width: 640px){
+  .main-banner{
+    height: 200px;
+    &__title{
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+    &__description{
+      font-size: 14px;
+    }
+  }
+  .stores{
+    &__lists{
+      display: block;
+    }
+    &__frame{
+      width: 100%;
+      margin: 0;
+    }
+    &__item{
+      max-width: 100%;
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+    }
+    &__map{
+      display: block;
+    }
+    &__contacts{
+      padding: 25px 16px;
+    }
   }
 }

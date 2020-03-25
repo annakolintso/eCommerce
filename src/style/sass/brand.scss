@@ -1,11 +1,30 @@
 .brand{
   padding-bottom: 124px;
+  &__main{
+    display: flex;
+    justify-content: space-between;
+    .brand__img, .brand__article{
+      width: calc(50% - 15px);
+    }
+    .brand__img{
+      object-fit: contain;
+    }
+    .brand__description{
+      padding-bottom: 90px;
+    }
+  }
   &__articles{
     display: flex;
     justify-content: space-between;
   }
   &__part{
     width: calc(50% - 15px);
+    &:last-child{
+      margin-top: -60px;
+      .brand__article{
+        margin-top:0;
+      }
+    }
   }
   &__img{
     display: block;
@@ -49,6 +68,10 @@
     justify-content: space-between;
     margin-top: 70px;
   }
+  &__logo{
+    width: 33.3%;
+    object-fit: contain;
+  }
 }
 .main-banner{
   display: flex;
@@ -78,5 +101,76 @@
     color: #ffffff;
     margin: 0;
     text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .main-banner{
+    height: 320px;
+    margin-bottom: 40px;
+    &__title{
+      font-size: 30px;
+      margin-bottom: 28px;
+    }
+    &__description{
+      font-size: 22px;
+    }
+  }
+  .brand{
+    &__main{
+      align-items: end;
+      .brand__article{
+        margin-top: 0;
+      }
+      .brand__description{
+        padding-bottom: 0;
+      }
+    }
+    &__articles{
+      margin-top: 26px;
+    }
+    &__part{
+      &:last-child{
+        margin-top: 0;
+      }
+      .brand__article{
+        margin-top: 0;
+      }
+    }
+  }
+
+}
+@media only screen and (max-width: 800px){
+  .brand{
+    &__main{
+      display: block;
+      .brand__img{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .brand__article{
+        width: 100%;
+      }
+    }
+
+  }
+}
+@media only screen and (max-width: 640px){
+  .main-banner{
+    height: 200px;
+    &__title{
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+    &__description{
+      font-size: 14px;
+    }
+  }
+  .brand{
+    &__part{
+      width: 100%;
+    }
+    &__articles{
+      display: block;
+    }
   }
 }
