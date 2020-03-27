@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
 });
 
-
+//basket
 let basketBtn = document.querySelector('.header__button');
 let popup = document.querySelectorAll('.popup');
 let basketPopup = document.querySelector('.popup-basket');
@@ -41,4 +41,77 @@ popup.forEach(el => {
             document.body.classList.remove('no-scroll');
         }
     });
-})
+});
+
+//forms
+let registerForm = document.querySelector('.register');
+let registerElements = registerForm.querySelectorAll('input');
+registerForm.addEventListener('submit', e => {
+    e.preventDefault();
+    let data = {};
+    registerElements.forEach(el => {
+        if (el.type === "checkbox") {
+            if (el.checked) {
+                data[el.name] = el.value;
+            }
+        } else {
+            data[el.name] = el.value;
+        }
+    });
+    if (data.password===data.confirmPassword){
+        let users = localStorage.getItem('users');
+        let usersData;
+        let similarEmail = false;
+        if (users){
+            usersData = JSON.parse(users);
+            usersData.users.forEach(user => {
+                if(user.email === data.email){
+                    similarEmail = true;
+                }
+            });
+            if(!similarEmail){
+                usersData.users.push(data);
+                localStorage.setItem('users', JSON.stringify(usersData));
+            }else {
+                // show error
+            }
+        }else {
+            usersData = {
+                users: [data],
+            }
+            localStorage.setItem('users', JSON.stringify(usersData));
+        }
+    }
+});
+
+
+let signInForm = document.querySelector('.sign-in');
+let signInElements = signInForm.querySelectorAll('input');
+signInForm.addEventListener('submit', e => {
+    e.preventDefault();
+    let data = {};
+    let users = localStorage.getItem('users');
+    let usersData;
+    let similarEmail = false;
+    signInElements.forEach(el => {
+        data[el.name] = el.value;
+    });
+    if (users){
+        usersData = JSON.parse(users);
+        usersData.users.forEach(user => {
+            if(user.email === data.email && user.password === data.password){
+                console.log('loginned');
+            }
+        });
+        if(!similarEmail){
+            usersData.users.push(data);
+            localStorage.setItem('users', JSON.stringify(usersData));
+        }else {
+            // show error
+        }
+    }else {
+        // show error
+    };
+});
+
+

@@ -247,11 +247,10 @@
   </section>
   <div class="container container_sm">    
     <div class="forms">
-
       <form class="form sign-in">
         <p class="form__name">sign in</p>
-        <input type="email" placeholder="Your Email" class="form__input" required>
-        <input type="password" minlength="6" placeholder="Your password" class="form__input" required>
+        <input name="email" type="email" placeholder="Your Email" class="form__input" required>
+        <input name="password" type="password" minlength="6" placeholder="Your password" class="form__input" required>
         <div class="form__buttons">
           <button class="btn-outline">Sign in</button>
           <a href="#" class="form__link">Forgot your Password</a>
@@ -259,12 +258,12 @@
       </form>
       <form class="form register">
         <p class="form__name">Register</p>
-        <input type="text" placeholder="Your Email" class="form__input">
-        <input type="text" placeholder="Your password" class="form__input">
-        <input type="text" placeholder="Confirm password" class="form__input">
+        <input name="email" type="email" placeholder="Your Email" class="form__input">
+        <input name="password" type="password" placeholder="Your password" class="form__input">
+        <input name="confirmPassword" type="password" placeholder="Confirm password" class="form__input">
         <div class="checkbox">
           <label class="checkbox__label">
-          <input type="checkbox" class="checkbox__input">
+          <input name="discount" type="checkbox" class="checkbox__input">
           <span class="checkbox__square"></span>
           <span class="checkbox__mark">Sign up for exclusive updates, discounts, new arrivals, contests, and more!</span>
         </label>
