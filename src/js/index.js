@@ -75,7 +75,7 @@ registerForm.addEventListener('submit', e => {
                 localStorage.setItem('users', JSON.stringify(usersData));
                 error.classList.remove('has-error');
                 registerElements.forEach(el => {
-                    el.value='';
+                    el.value = '';
                 });
                 let success = document.querySelector('.success');
                 success.classList.add('has-registration');
@@ -115,7 +115,7 @@ signInForm.addEventListener('submit', e => {
         usersData = JSON.parse(users);
         usersData.users.forEach(user => {
             if (user.email === data.email && user.password === data.password) {
-                document.location.href = '/';
+                document.location.href = '/eCommerce';
                 error.classList.remove('has-error');
             } else {
                 error.classList.add('has-error');
@@ -123,7 +123,8 @@ signInForm.addEventListener('submit', e => {
         });
     } else {
         error.classList.add('has-error')
-    };
+    }
+    ;
 });
 
 
