@@ -255,12 +255,15 @@
           <button class="btn-outline">Sign in</button>
           <a href="#" class="form__link">Forgot your Password</a>
         </div>
+        <div class="error">
+          <p class="error__message">Incorrect email or password</p>
+        </div>
       </form>
       <form class="form register">
         <p class="form__name">Register</p>
-        <input name="email" type="email" placeholder="Your Email" class="form__input">
-        <input name="password" type="password" placeholder="Your password" class="form__input">
-        <input name="confirmPassword" type="password" placeholder="Confirm password" class="form__input">
+        <input name="email" type="email" placeholder="Your Email" class="form__input" required>
+        <input name="password" type="password" placeholder="Your password" class="form__input" required>
+        <input name="confirmPassword" type="password" placeholder="Confirm password" class="form__input" required>
         <div class="checkbox">
           <label class="checkbox__label">
           <input name="discount" type="checkbox" class="checkbox__input">
@@ -272,6 +275,12 @@
           <button class="btn-outline">Create Account</button>
           <p class="form__desc">By clicking ‘Create Account’, you
             agree to our<a href="#" class="form__link">Privacy Policy</a></p>
+        </div>
+        <div class="error">
+          <p class="error__message">Incorrect email or password</p>
+        </div>
+        <div class="success">
+          <p class="success__message">Your registration was successful</p>
         </div>
       </form>
     </div>

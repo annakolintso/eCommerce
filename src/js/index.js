@@ -1,6 +1,6 @@
 "use strict";
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#currencySelect').select2({
         minimumResultsForSearch: -1,
         dropdownCssClass: 'currency-dropdown',
@@ -36,7 +36,7 @@ burgerBtn.addEventListener('click', () => {
 });
 popup.forEach(el => {
     el.addEventListener('click', event => {
-        if(event.target.classList.contains('popup') || event.target.closest('.close')){
+        if (event.target.classList.contains('popup') || event.target.closest('.close')) {
             el.classList.remove('active');
             document.body.classList.remove('no-scroll');
         }
@@ -49,6 +49,7 @@ let registerElements = registerForm.querySelectorAll('input');
 registerForm.addEventListener('submit', e => {
     e.preventDefault();
     let data = {};
+    let error = document.querySelector('.register .error');
     registerElements.forEach(el => {
         if (el.type === "checkbox") {
             if (el.checked) {
@@ -58,29 +59,42 @@ registerForm.addEventListener('submit', e => {
             data[el.name] = el.value;
         }
     });
-    if (data.password===data.confirmPassword){
+    if (data.password === data.confirmPassword) {
         let users = localStorage.getItem('users');
         let usersData;
         let similarEmail = false;
-        if (users){
+        if (users) {
             usersData = JSON.parse(users);
             usersData.users.forEach(user => {
-                if(user.email === data.email){
+                if (user.email === data.email) {
                     similarEmail = true;
                 }
             });
-            if(!similarEmail){
+            if (!similarEmail) {
                 usersData.users.push(data);
                 localStorage.setItem('users', JSON.stringify(usersData));
-            }else {
-                // show error
+                error.classList.remove('has-error');
+                registerElements.forEach(el => {
+                    el.value='';
+                });
+                let success = document.querySelector('.success');
+                success.classList.add('has-registration');
+
+            } else {
+                let errorMessage = error.querySelector('.error__message');
+                errorMessage.innerHTML = "Enter another email";
+                error.classList.add('has-error');
             }
-        }else {
+        } else {
             usersData = {
                 users: [data],
-            }
+            };
             localStorage.setItem('users', JSON.stringify(usersData));
         }
+    } else {
+        let errorMessage = error.querySelector('.error__message');
+        errorMessage.innerHTML = "Check your password";
+        error.classList.add('has-error');
     }
 });
 
@@ -92,25 +106,23 @@ signInForm.addEventListener('submit', e => {
     let data = {};
     let users = localStorage.getItem('users');
     let usersData;
-    let similarEmail = false;
+    let error = document.querySelector('.sign-in .error');
+
     signInElements.forEach(el => {
         data[el.name] = el.value;
     });
-    if (users){
+    if (users) {
         usersData = JSON.parse(users);
         usersData.users.forEach(user => {
-            if(user.email === data.email && user.password === data.password){
-                console.log('loginned');
+            if (user.email === data.email && user.password === data.password) {
+                document.location.href = '/';
+                error.classList.remove('has-error');
+            } else {
+                error.classList.add('has-error');
             }
         });
-        if(!similarEmail){
-            usersData.users.push(data);
-            localStorage.setItem('users', JSON.stringify(usersData));
-        }else {
-            // show error
-        }
-    }else {
-        // show error
+    } else {
+        error.classList.add('has-error')
     };
 });
 

@@ -124,6 +124,28 @@
     }
   }
 }
+.error{
+  display: none;
+  &.has-error{
+    display: block;
+  }
+  &__message{
+    color: #d63447;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+  }
+}
+.success{
+  display: none;
+  &.has-registration{
+    display: block;
+  }
+  &__message{
+    color: #01d28e;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+  }
+}
 @media only screen and (max-width: 1024px){
   .main-banner{
     height: 320px;
