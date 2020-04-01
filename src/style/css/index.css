@@ -2154,6 +2154,45 @@ body.no-scroll {
   transform: rotate(-45deg);
 }
 
+.mobile-menu__list {
+  padding: 0;
+  margin: 54px 0;
+  position: relative;
+  padding-bottom: 60px;
+}
+.mobile-menu__list::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #727272;
+  position: absolute;
+  bottom: 0;
+}
+.mobile-menu__item {
+  list-style-type: none;
+}
+.mobile-menu__item:not(:last-child) {
+  padding-bottom: 20px;
+}
+.mobile-menu__link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 16px;
+  color: #727272;
+  text-transform: uppercase;
+}
+.mobile-menu__search {
+  margin-top: 50px;
+}
+.mobile-menu__search .search {
+  margin: 0;
+}
+.mobile-menu__search .search__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+}
+
 @media only screen and (max-width: 1700px) {
   .lookbook__item {
     flex-direction: column;
