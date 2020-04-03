@@ -26,6 +26,7 @@ let popup = document.querySelectorAll('.popup');
 let basketPopup = document.querySelector('.popup-basket');
 let menuPopup = document.querySelector('.popup-menu');
 let burgerBtn = document.querySelector(".burger");
+let basketProducts = document.querySelector('.basket__main');
 basketBtn.addEventListener('click', () => {
     basketPopup.classList.add('active');
     document.body.classList.add('no-scroll');
@@ -42,14 +43,22 @@ popup.forEach(el => {
         }
     });
 });
+basketProducts && basketProducts.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target.classList.contains("close-sm") || target.closest('.close-sm')){
+        target.closest('.basket__item').remove();
+    };
+});
+
+
 
 //forms
 let registerForm = document.querySelector('.register');
-let registerElements = registerForm.querySelectorAll('input');
-registerForm.addEventListener('submit', e => {
+registerForm && registerForm.addEventListener('submit', e => {
     e.preventDefault();
     let data = {};
     let error = document.querySelector('.register .error');
+    let registerElements = registerForm.querySelectorAll('input');
     registerElements.forEach(el => {
         if (el.type === "checkbox") {
             if (el.checked) {
@@ -100,14 +109,13 @@ registerForm.addEventListener('submit', e => {
 
 
 let signInForm = document.querySelector('.sign-in');
-let signInElements = signInForm.querySelectorAll('input');
-signInForm.addEventListener('submit', e => {
+signInForm && signInForm.addEventListener('submit', e => {
     e.preventDefault();
     let data = {};
     let users = localStorage.getItem('users');
     let usersData;
     let error = document.querySelector('.sign-in .error');
-
+    let signInElements = signInForm.querySelectorAll('input');
     signInElements.forEach(el => {
         data[el.name] = el.value;
     });
@@ -123,8 +131,7 @@ signInForm.addEventListener('submit', e => {
         });
     } else {
         error.classList.add('has-error')
-    }
-    ;
+    };
 });
 
 
