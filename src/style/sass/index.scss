@@ -519,6 +519,18 @@
       font-size: 13px;
     }
   }
+  &__auth{
+    display: none;
+  }
+  &.authorized{
+    .mobile-menu__registration{
+      display: none;
+    }
+    .mobile-menu__auth{
+      display: block;
+    }
+  }
+
 }
 @media only screen and (max-width: 1700px) {
   .lookbook {

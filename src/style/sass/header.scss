@@ -8,7 +8,22 @@
       display: none;
     }
   }
+  &__authorization{
+    display: none;
+  }
+  &__register{
+    margin: 0;
+    display: inline-block;
+  }
 
+  &.authorized{
+    .header__sign-links{
+      display: none;
+    }
+    .header__authorization{
+      display: block;
+    }
+  }
   &__custom {
     display: flex;
     justify-content: space-between;
@@ -367,6 +382,7 @@
     display: block;
   }
 }
+
 @media only screen and (max-width: 1024px){
   .header{
     &__top{

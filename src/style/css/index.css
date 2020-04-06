@@ -120,6 +120,19 @@ body.no-scroll {
 .header__top .burger {
   display: none;
 }
+.header__authorization {
+  display: none;
+}
+.header__register {
+  margin: 0;
+  display: inline-block;
+}
+.header.authorized .header__sign-links {
+  display: none;
+}
+.header.authorized .header__authorization {
+  display: block;
+}
 .header__custom {
   display: flex;
   justify-content: space-between;
@@ -2246,6 +2259,16 @@ body.no-scroll {
   width: 100%;
   border: none;
   border-bottom: 1px solid #e7e7e7;
+  font-size: 13px;
+}
+.mobile-menu__auth {
+  display: none;
+}
+.mobile-menu.authorized .mobile-menu__registration {
+  display: none;
+}
+.mobile-menu.authorized .mobile-menu__auth {
+  display: block;
 }
 
 @media only screen and (max-width: 1700px) {

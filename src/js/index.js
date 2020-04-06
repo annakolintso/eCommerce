@@ -46,7 +46,7 @@ popup.forEach(el => {
 basketProducts && basketProducts.addEventListener('click', (e) => {
     let target = e.target;
     if (target.classList.contains("close-sm") || target.closest('.close-sm')){
-        target.closest('.basket__item').remove();
+        $(target).closest('.basket__item').slideUp();
     };
 });
 
@@ -123,6 +123,10 @@ signInForm && signInForm.addEventListener('submit', e => {
         usersData = JSON.parse(users);
         usersData.users.forEach(user => {
             if (user.email === data.email && user.password === data.password) {
+                let userEmail = {
+                    email: user.email,
+                }
+                localStorage.setItem('auth', JSON.stringify(userEmail));
                 document.location.href = '/eCommerce';
                 error.classList.remove('has-error');
             } else {
@@ -134,4 +138,32 @@ signInForm && signInForm.addEventListener('submit', e => {
     };
 });
 
+function authorization() {
+    let header = document.querySelector('.header');
+    let userName = header.querySelectorAll('.header__name');
+    let authData = JSON.parse(localStorage.getItem('auth'));
+    let popupMenu = document.querySelector('.popup-menu');
+    if (authData && authData.email){
+        userName.forEach(el =>{
+            el.innerHTML = authData.email;
+        });
+        header.classList.add('authorized');
+        popupMenu.classList.add('authorized');
+    } else {
+        header.classList.remove('authorized');
+        popupMenu.classList.remove('authorized');
+    }
+}
+authorization();
 
+function logOut() {
+    let logOutBtn = document.querySelectorAll('.header__exit');
+    logOutBtn.forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('auth');
+            authorization();
+        });
+    })
+}
+logOut();
