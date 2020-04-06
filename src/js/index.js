@@ -142,7 +142,7 @@ function authorization() {
     let header = document.querySelector('.header');
     let userName = header.querySelectorAll('.header__name');
     let authData = JSON.parse(localStorage.getItem('auth'));
-    let popupMenu = document.querySelector('.popup-menu');
+    let popupMenu = document.querySelector('.mobile-menu');
     if (authData && authData.email){
         userName.forEach(el =>{
             el.innerHTML = authData.email;
