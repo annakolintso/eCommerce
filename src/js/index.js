@@ -140,7 +140,7 @@ signInForm && signInForm.addEventListener('submit', e => {
 
 function authorization() {
     let header = document.querySelector('.header');
-    let userName = header.querySelectorAll('.header__name');
+    let userName = document.querySelectorAll('.header__name');
     let authData = JSON.parse(localStorage.getItem('auth'));
     let popupMenu = document.querySelector('.mobile-menu');
     if (authData && authData.email){

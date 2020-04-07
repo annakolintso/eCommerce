@@ -30,8 +30,15 @@
         <a href="/eCommerce" class="logo"><span class="logo__part">avenue</span> fashion</a>
         <a href="/eCommerce" class="logo logo-mobile"><span class="logo__part">a</span>f</a>
         <div class="header__right">
-          <a href="/eCommerce/templates/sign-in.html" class="header__register">Register</a>
-          <a href="/eCommerce/templates/sign-in.html" class="header__sign-in">Sign In</a>
+          <div class="header__authorization">
+            <p class="header__register header__name"></p>
+            <a href="#" class="header__sign-in header__exit">Log Out</a>
+          </div>
+          <div class="header__sign-links">
+            <a href="/eCommerce/templates/sign-in.html" class="header__register">Register</a>
+            <a href="/eCommerce/templates/sign-in.html" class="header__sign-in">Sign In</a>
+          </div>
+
           <div class="header__button">
             <a href="#" class="header__basket">Basket</a>
           </div>
@@ -766,6 +773,10 @@
       <div class="mobile-menu__registration">
         <a href="./templates/sign-in.html" class="header__register">Register</a>
         <a href="./templates/sign-in.html" class="header__sign-in">Sign In</a>
+      </div>
+      <div class="mobile-menu__registration mobile-menu__auth">
+        <p class="header__register header__name"></p>
+        <a href="./templates/sign-in.html" class="header__sign-in header__exit">Log Out</a>
       </div>
       <div class="mobile-menu__search">
         <label class="search">
