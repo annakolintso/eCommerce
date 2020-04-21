@@ -1241,6 +1241,7 @@ body.no-scroll {
   align-items: center;
 }
 .tabs__title {
+  margin: 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.25;
@@ -1277,11 +1278,11 @@ body.no-scroll {
 .tabs__input {
   display: none;
 }
-.tabs__input:checked + .tabs__content {
-  display: block;
-}
 .tabs__content {
   display: none;
+}
+.tabs__content.active {
+  display: block;
 }
 
 .price {

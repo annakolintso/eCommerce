@@ -390,6 +390,7 @@
   }
 
   &__title {
+    margin: 0;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25;
@@ -433,15 +434,12 @@
     display: none;
   }
 
-  &__input:checked {
-    & + .tabs__content {
-      display: block;
-    }
-  }
 
   &__content {
     display: none;
-
+    &.active{
+      display: block;
+    }
   }
 
 }

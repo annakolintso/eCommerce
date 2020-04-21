@@ -167,3 +167,26 @@ function logOut() {
     })
 }
 logOut();
+
+
+//tabs
+
+let tab = function () {
+ let tabNav = document.querySelectorAll('.tabs__title');
+ let tabContent = document.querySelectorAll('.tabs__content');
+ let tabName;
+ tabNav.forEach(item=>{
+     item.addEventListener('click', (event) => {
+         tabNav.forEach(i=> {
+             i.classList.remove('active');
+         });
+         item.classList.add('active');
+         tabName = item.getAttribute('data-tab-name');
+         tabContent.forEach(content=> {
+             content.classList.remove('active');
+         });
+         document.querySelector(`.${tabName}`).classList.add('active');
+     });
+ });
+};
+tab();
